@@ -1,0 +1,15 @@
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\bin\Debug\Skladiste.exe.config
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\bin\Debug\Skladiste.exe
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\bin\Debug\Skladiste.pdb
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste.csprojResolveAssemblyReference.cache
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\MainWindow.g.cs
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\App.g.cs
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste_MarkupCompile.cache
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste_MarkupCompile.lref
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\MainWindow.baml
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste.g.resources
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste.Properties.Resources.resources
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste.csproj.GenerateResource.cache
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste.csproj.CoreCompileInputs.cache
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste.exe
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste.pdb
