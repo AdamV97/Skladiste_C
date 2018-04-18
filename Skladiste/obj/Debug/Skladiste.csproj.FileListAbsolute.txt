@@ -13,3 +13,9 @@ D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste.csproj.Ge
 D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste.csproj.CoreCompileInputs.cache
 D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste.exe
 D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste.pdb
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\bin\Debug\Database1.mdf
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\bin\Debug\Database1_log.ldf
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Skladiste_Content.g.cs
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Uvoz.g.cs
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\Uvoz.baml
+D:\Programiranje\Visual Studio\Skladiste\Skladiste\obj\Debug\GeneratedInternalTypeHelper.g.cs

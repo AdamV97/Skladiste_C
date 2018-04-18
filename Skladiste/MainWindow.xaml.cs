@@ -23,8 +23,13 @@ namespace Skladiste
         public MainWindow()
         {
             InitializeComponent();
-        
+ 
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Uvoz uvoz = new Uvoz();
+            uvoz.Show();
+        }
     }
 }

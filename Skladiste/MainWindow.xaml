@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Skladistenje" Height="450" Width="553.791" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Content="Uvoz" HorizontalAlignment="Left" Height="51" Margin="201,32,0,0" VerticalAlignment="Top" Width="138" FontFamily="Stencil" FontSize="14"/>
+        <Button Content="Uvoz" HorizontalAlignment="Left" Height="51" Margin="201,32,0,0" VerticalAlignment="Top" Width="138" FontFamily="Stencil" FontSize="14" Click="Button_Click"/>
         <Button Content="izvoz" HorizontalAlignment="Left" Height="51" Margin="201,129,0,0" VerticalAlignment="Top" Width="138" FontFamily="Stencil" FontSize="14"/>
         <Button Content="ispravi" HorizontalAlignment="Left" Height="51" Margin="201,228,0,0" VerticalAlignment="Top" Width="138" FontFamily="Stencil" FontSize="14"/>
         <Button Content="pregled robe" HorizontalAlignment="Left" Height="51" Margin="201,327,0,0" VerticalAlignment="Top" Width="138" FontFamily="Stencil" FontSize="14"/>
