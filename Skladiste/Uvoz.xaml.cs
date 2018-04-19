@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace Skladiste
 {
     /// <summary>
@@ -19,7 +22,11 @@ namespace Skladiste
     /// </summary>
     public partial class Uvoz : Window
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Programiranje\Visual Studio\Skladiste\Skladiste\Database1.mdf");
+
+
         public Uvoz()
+
         {
             InitializeComponent();
         }
@@ -47,10 +54,19 @@ namespace Skladiste
 
         private void btnUvezi_Click(object sender, RoutedEventArgs e)
         {
+            int a = 1;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert into Roba values('"+txtIdRobe+"','"  +txtOznaka+ "','" + txtMasa + "','" + txtVrijednost + "','"+ cmbPolica1 + "')";
+            cmd.ExecuteNonQuery();
+            con.Close();
 
+            MessageBox.Show("Uveženo");
          
-           
 
         }
+
+
     }
 }

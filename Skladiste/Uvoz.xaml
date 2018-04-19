@@ -15,43 +15,27 @@
         <CollectionViewSource x:Key="policaViewSource" Source="{Binding Polica, Source={StaticResource database1DataSet}}"/>
         <CollectionViewSource x:Key="policaRobaViewSource" Source="{Binding FK_Roba_ToTable, Source={StaticResource policaViewSource}}"/>
     </Window.Resources>
-    <Grid DataContext="{StaticResource trgovinaPolicaRobaViewSource}" Background="#FFD3CFCF">
-        <Grid x:Name="grid1" DataContext="{StaticResource robaViewSource}" HorizontalAlignment="Left" Margin="83,56,0,0" VerticalAlignment="Top" Width="190" Height="34">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" MinWidth="61"/>
-                <ColumnDefinition Width="Auto" MinWidth="123"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Oznaka:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="0" VerticalAlignment="Center" Height="26" Width="52"/>
-            <TextBox x:Name="oznakaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="0,4,-57,6" Grid.Row="0" Text="{Binding Oznaka, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="184"/>
-        </Grid>
-        <Grid x:Name="grid2" DataContext="{StaticResource robaViewSource}" HorizontalAlignment="Left" Margin="69,103,0,0" VerticalAlignment="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="14.491"/>
-                <ColumnDefinition Width="32.509"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Masa:" Grid.Column="1" HorizontalAlignment="Left" Margin="14,4,0,2" Grid.Row="0" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="41"/>
-            <TextBox x:Name="masaTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="27,4,-92,4" Grid.Row="0" Text="{Binding Masa, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="188"/>
-        </Grid>
-        <Grid x:Name="grid3" DataContext="{StaticResource robaViewSource}" HorizontalAlignment="Left" Margin="67,154,0,0" VerticalAlignment="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Vrijednost:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="vrijednostTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-65,4" Grid.Row="0" Text="{Binding Vrijednost, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="188"/>
-        </Grid>
+    <Grid x:Name="cmbPolica" DataContext="{StaticResource trgovinaPolicaRobaViewSource}" Background="#FFD3CFCF">
         <Button x:Name="btnUvezi" Content="Spremi" HorizontalAlignment="Left" Height="50" Margin="167,284,0,0" VerticalAlignment="Top" Width="120" IsCancel="True" Click="btnUvezi_Click"/>
-        <ListView x:Name="robaListView" ItemsSource="{Binding Roba, Source={StaticResource database1DataSet}}" Margin="382,10,10,10" SelectionMode="Single">
+        <TextBox x:Name="txtOznaka" HorizontalAlignment="Left" Height="28" Margin="144,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181"/>
+        <TextBox x:Name="txtMasa" HorizontalAlignment="Left" Height="24" Margin="144,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181"/>
+        <TextBox x:Name="txtVrijednost" HorizontalAlignment="Left" Height="24" Margin="144,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181"/>
+        <Grid x:Name="grid1" DataContext="{StaticResource robaViewSource}" HorizontalAlignment="Left" Margin="81,190,0,0" VerticalAlignment="Top" Width="244">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Label Content="Oznaka" HorizontalAlignment="Left" Height="28" Margin="62,37,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label Content="Vrijednost" HorizontalAlignment="Left" Height="28" Margin="62,146,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label Content="Masa" HorizontalAlignment="Left" Height="28" Margin="62,94,0,0" VerticalAlignment="Top" Width="77"/>
+        <TextBox x:Name="txtIdRobe" HorizontalAlignment="Left" Height="22" Margin="144,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" UndoLimit="10"/>
+        <Label Content="Id robe" HorizontalAlignment="Left" Height="32" Margin="62,190,0,0" VerticalAlignment="Top" Width="77"/>
+        <ComboBox x:Name="cmbPolica1" HorizontalAlignment="Left" Height="29" Margin="144,236,0,0" VerticalAlignment="Top" Width="181" ItemsSource="{Binding IdPolica, Source={StaticResource robaViewSource}}"/>
+        <ListView x:Name="robaListView" ItemsSource="{Binding Source={StaticResource robaViewSource}}" Margin="382,10,10,19" SelectionMode="Single">
             <ListView.ItemContainerStyle>
                 <Style>
                     <Setter Property="Control.HorizontalContentAlignment" Value="Stretch"/>
@@ -91,29 +75,14 @@
                     <GridViewColumn x:Name="idPolicaColumn" Header="Id Polica" Width="80">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Margin="-6,-1" Text="{Binding IdPolica, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                <ComboBox Margin="-6,-1">
+                                    <ComboBoxItem Content="{Binding IdPolica}"/>
+                                </ComboBox>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Grid x:Name="grid4" DataContext="{StaticResource policaViewSource}" HorizontalAlignment="Left" Margin="83,200,0,0" VerticalAlignment="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Id Polica:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <ComboBox x:Name="idPolicaComboBox" DisplayMemberPath="IdPolica" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="60,5,-56,5" Grid.Row="0" VerticalAlignment="Center" Width="185" Grid.ColumnSpan="2">
-                <ComboBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <VirtualizingStackPanel/>
-                    </ItemsPanelTemplate>
-                </ComboBox.ItemsPanel>
-            </ComboBox>
-        </Grid>
     </Grid>
 </Window>

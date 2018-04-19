@@ -233,7 +233,7 @@ SELECT IdTrgovina, Ime, Adresa, Telefon FROM Trgovina WHERE (IdTrgovina = @IdTrg
         <xs:element name="Roba" msprop:Generator_TableClassName="RobaDataTable" msprop:Generator_TableVarName="tableRoba" msprop:Generator_TablePropName="Roba" msprop:Generator_RowDeletingName="RobaRowDeleting" msprop:Generator_RowChangingName="RobaRowChanging" msprop:Generator_RowEvHandlerName="RobaRowChangeEventHandler" msprop:Generator_RowDeletedName="RobaRowDeleted" msprop:Generator_UserTableName="Roba" msprop:Generator_RowChangedName="RobaRowChanged" msprop:Generator_RowEvArgName="RobaRowChangeEvent" msprop:Generator_RowClassName="RobaRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdRoba" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdRoba" msprop:Generator_ColumnPropNameInRow="IdRoba" msprop:Generator_ColumnPropNameInTable="IdRobaColumn" msprop:Generator_UserColumnName="IdRoba" type="xs:int" />
+              <xs:element name="IdRoba" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdRoba" msprop:Generator_ColumnPropNameInRow="IdRoba" msprop:Generator_ColumnPropNameInTable="IdRobaColumn" msprop:Generator_UserColumnName="IdRoba" type="xs:int" />
               <xs:element name="Oznaka" msprop:Generator_ColumnVarNameInTable="columnOznaka" msprop:Generator_ColumnPropNameInRow="Oznaka" msprop:Generator_ColumnPropNameInTable="OznakaColumn" msprop:Generator_UserColumnName="Oznaka">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

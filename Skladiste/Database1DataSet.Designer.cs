@@ -797,10 +797,10 @@ namespace Skladiste {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public RobaRow AddRobaRow(string Oznaka, string Masa, double Vrijednost, PolicaRow parentPolicaRowByFK_Roba_ToTable) {
+            public RobaRow AddRobaRow(int IdRoba, string Oznaka, string Masa, double Vrijednost, PolicaRow parentPolicaRowByFK_Roba_ToTable) {
                 RobaRow rowRobaRow = ((RobaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        IdRoba,
                         Oznaka,
                         Masa,
                         Vrijednost,
@@ -859,7 +859,6 @@ namespace Skladiste {
                 base.Columns.Add(this.columnIdPolica);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdRoba}, true));
-                this.columnIdRoba.AutoIncrement = true;
                 this.columnIdRoba.AutoIncrementSeed = -1;
                 this.columnIdRoba.AutoIncrementStep = -1;
                 this.columnIdRoba.AllowDBNull = false;
